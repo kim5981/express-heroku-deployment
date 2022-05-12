@@ -1,5 +1,5 @@
 const express = require("express")
-const theories = require("./conspiracyTheories")
+const quotes = require("./quotes")
 
 const server = express()
 
@@ -12,9 +12,9 @@ server.get("/node-env", (req, res) => {
 })
 
 // get a random theory
-server.get("/theory", (req, res) => {
-    let randIdx = Math.floor(Math.random() * theories.length)
-    res.send(`<h1> ${theories[randIdx]} </h1>`)
+server.get("/quote", (req, res) => {
+    let randIdx = Math.floor(Math.random() * quotes.length)
+    res.send(`<h1> ^ↀᴥↀ^ <br> cat says : ${quotes[randIdx]} </h1>`)
 })
 
 module.exports = server

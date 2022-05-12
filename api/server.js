@@ -1,15 +1,14 @@
 const express = require("express")
-
+const theories = require("./conspiracyTheories")
 const server = express()
 
-server.use("*", (req, res) => {
+server.get("/", (req, res) => {
     res.send("<h1>kim was here</h1>")
 })
 
-server.get("/api/hello", (req, res) => {
-    res.json({
-        message: "success"
-    })
+server.get("/theories", (req, res) => {
+    let randIdx = Math.floor(Math.random() * theories.length)
+    res.send(`<h1> ${theories(randIdx)} </h1>`)
 })
 
 module.exports = server

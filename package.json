@@ -1,0 +1,32 @@
+{
+  "name": "express-heroku-deployment",
+  "version": "1.0.0",
+  "description": "In this challenge, you will build a simple Express app and deploy it to Heroku.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "push": "git push origin main && git push heroku main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kim5981/express-heroku-deployment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kim5981/express-heroku-deployment/issues"
+  },
+  "homepage": "https://github.com/kim5981/express-heroku-deployment#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.0.2"
+  }
+}
